@@ -259,7 +259,7 @@ class GroupPageParser(PageParser):
             return next_page
 
         assert self.cursor_blob is not None
-        print("using extra page processor")
+        logger.debug("using extra page processor")
         match = self.cursor_regex_3.search(self.cursor_blob)
         if match:
             value = match.groups()[0]
