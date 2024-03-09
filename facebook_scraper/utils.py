@@ -188,7 +188,7 @@ def parse_datetime(text: str, search=True) -> Optional[datetime]:
         The datetime object, or None if it couldn't find a date.
     """
     settings = {
-        'RELATIVE_BASE': datetime.today().replace(minute=0, hour=0, second=0, microsecond=0)
+        'RELATIVE_BASE': datetime.now()
     }
     if search:
         time_match = datetime_regex.search(text)
